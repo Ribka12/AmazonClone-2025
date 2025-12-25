@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import style from "./Header.module.css";
+import style from "./header.module.css";
 import amazonlogo from "../../../assets/img/amazon.png";
 import america2 from "../../../assets/img/america2.png";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
