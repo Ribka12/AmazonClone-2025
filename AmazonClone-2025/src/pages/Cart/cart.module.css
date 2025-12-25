@@ -1,0 +1,246 @@
+.cartContainer {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+.cartContainer > div {
+  margin: auto;
+    width: 80%;
+    height: 20%;
+  }
+.cartContainer > div img{
+  margin: auto;
+    width: 60%;
+    height: 60%;
+  }
+  
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+  }
+  
+  .empty {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Wrapper for all cart items */
+  .itemsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  /* Each item row */
+  .cartItem {
+    display: flex;
+    gap: 20px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    align-items: center;
+  }
+  
+  /* Thumbnail Image */
+  .imageBox {
+    width: 110px;
+    height: 110px;
+    padding: 8px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageBox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* INFO */
+  .infoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+    padding-top: 20px ;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e47911;
+  }
+  
+  .category {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* REMOVE BUTTON */
+  .cancelBtn {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #d9534f;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .cancelBtn:hover {
+    background: #c9302c;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .cartItem {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .imageBox {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+  
+    .title {
+      font-size: 16px;
+    }
+  
+    .price {
+      font-size: 18px;
+    }
+  
+    .cancelBtn {
+      width: 100%;
+    }
+    .topright .checkcard {
+        width: 200px;
+    }
+  }
+  
+
+
+  /* Checkout */
+ 
+  
+  .topright .checkcard {
+    width: 270px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    position: absolute;
+    right: 3%;
+    top: 1% ;
+    overflow: hidden;
+  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .topright .checkrow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+  
+  .topright .checklabel {
+    font-weight: 500;
+  }
+  
+  .topright .checkamount {
+    font-weight: bold;
+  }
+  
+  .topright.checkgiftRow {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    gap: 6px;
+  }
+  
+  .topright .checkoutBtn {
+    width: 100%;
+    padding: 10px 0;
+    background: #f0c14b;
+    border: 1px solid #a88734;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .topright .checkoutBtn:hover {
+    background: #e8b53f;
+  }
+  
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .qtyControl {
+    display: flex;
+    flex-direction: column;
+    width: 42px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .qtyBtn {
+    height: 28px;
+    border: none;
+    background: #fafafa;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.15s;
+  }
+  
+  .qtyBtn:hover {
+    background: #ebd368;
+  }
+  
+  .qtyDisplay {
+    height: 30px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  

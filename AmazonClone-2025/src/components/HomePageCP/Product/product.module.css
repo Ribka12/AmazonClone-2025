@@ -1,0 +1,125 @@
+/* GRID LAYOUT */
+.grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(230px, 1fr));
+  row-gap: 30px;
+  padding: 30px;
+  margin-top: 20vh;
+  justify-items: center;
+  position: relative;
+}
+
+/* PRODUCT CARD */
+.singlecard {
+  width: 200px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.singlecard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+.singlecard:hover .btn {
+  display: block;
+}
+/* PRODUCT IMAGE WRAPPER */
+.singlecard .imgBox {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singlecard .imgBox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* TITLE */
+.singlecard .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #111;
+  height: 40px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-align: left;
+}
+
+/* RATING ROW */
+.singlecard .ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 8px;
+}
+
+.singlecard .count {
+  font-size: 12px;
+  color: #555;
+}
+
+/* PRICE */
+.singlecard .price {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ADD TO CART BUTTON */
+.singlecard .btn {
+  width: 100%;
+  padding: 8px 0;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, border-color 0.2s;
+  display: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+
+  background: #e2b33c;
+  border-color: #8f7630;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+  }
+  .singlecard .btn {
+    
+    display: block
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+

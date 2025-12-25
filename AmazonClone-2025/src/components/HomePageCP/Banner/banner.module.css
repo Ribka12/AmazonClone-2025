@@ -1,0 +1,44 @@
+.banner {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+    overflow: hidden;
+}
+
+.bannerBottom {
+  z-index: 1;
+  height: 40vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-image: 
+  linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 300px);
+}
+
+@media (max-width: 960px) {
+  .banner {
+    height: 50vh;
+  }
+s
+  .bannerBottom {
+    height: 25vh;
+  }
+}
+@media (max-width: 600px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .bannerBottom {
+    height: 20vh;
+  }
+}
+@media (max-width: 400px) {
+  .banner {
+    height: 25vh;
+  }
+
+  .bannerBottom {
+    height: 10vh;
+  }
+}

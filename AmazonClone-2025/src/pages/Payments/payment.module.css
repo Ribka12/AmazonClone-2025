@@ -1,0 +1,152 @@
+/* =========================
+   PAGE SHELL
+   ========================= */
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+/* =========================
+   CARD SECTIONS
+   ========================= */
+
+.section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+.productsSection {
+  display: flex;
+}
+.section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+/* =========================
+   ADDRESS
+   ========================= */
+.deliverSection {
+  display: flex;
+  gap: 10vw;
+}
+.section p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =========================
+   PRODUCT LIST (ProductUI)
+   ========================= */
+
+.products {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+}
+
+.productWrapper {
+  padding: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fafafa);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productWrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.productWrapper > div {
+  transform: scale(0.92);
+  transform-origin: left center;
+}
+
+.productWrapper button {
+  display: none;
+}
+
+.productWrapper h1 {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   PAY BUTTON
+   ========================= */
+
+.payBtn {
+  width: 60%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(180deg, #f5d67b, #f0c14b);
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+.payBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(240, 193, 75, 0.45);
+}
+
+.payBtn:active {
+  transform: scale(0.98);
+}
+
+.btncontainer {
+  display: flex;
+  margin-top: 12vh;
+
+  gap: 5vw;
+}
+.btncontainer p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .payBtn {
+    width: 40%;
+  }
+  .btncontainer p {
+    font-size: 18px;
+  }
+  .productsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .cardRow {
+    grid-template-columns: 1fr;
+  }
+
+  .productWrapper > div {
+    transform: scale(0.95);
+  }
+}

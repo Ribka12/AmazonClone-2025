@@ -1,0 +1,384 @@
+/* Header.module.css */
+
+/* Vars */
+:root {
+  --header-bg: #131921;
+  --navbar-bg: #232f3e;
+  --muted: #d0d3d4;
+  --accent: #febd69;
+  --white: #ffffff;
+  --link-hover: #f3f4f6;
+  --cart-bubble: #f08804;
+}
+
+
+/* ====== MAIN HEADER ====== */
+.header {
+  background-color: var(--header-bg);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 18px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* LEFT SECTION (logo + deliver) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0; /* allow children to shrink */
+}
+
+/* LOGO */
+.logo img {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+/* DELIVER (location) */
+.deliver {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.deliveryText .small-text {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1;
+}
+.deliveryText .large-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--white);
+  line-height: 1;
+}
+
+/* ====== SEARCH BAR ====== */
+.search-bar {
+  flex: 1 1 520px; /* allow growth */
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0 8px;
+  min-width: 0;
+  max-width: 900px;
+}
+
+/* category select on the left of search */
+.search-category {
+  background: #f3f3f4;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 4px 0 0 4px;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+/* text input */
+.search-bar input {
+  flex: 1 1 auto;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  min-width: 0;
+  
+}
+.search-bar input:focus-within {
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+}
+
+/* search button (icon) */
+.search-btn {
+  background: var(--accent);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-btn:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
+  background: #e8a853;
+}
+
+/* ====== RIGHT SIDE ====== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* language flag + select */
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+  font-size: 13px;
+}
+.lang-select {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+.lang .flag img {
+  width: 22px;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* small helper text */
+.small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* signin */
+.signin a,
+.returnandorder a,
+.cart a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--white);
+  align-items: flex-start;
+}
+.signin .account,
+.returnandorder .orders {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* For the returns block, stack horizontally on small text but vertical by default */
+.returnandorder a {
+  align-items: flex-start;
+}
+
+/* cart */
+.cart a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.cart a span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.cartCount {
+  background: var(--cart-bubble);
+  color: var(--white);
+  padding: 1px 4px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+/* ====== NAVBAR (below header) ====== */
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--white);
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+/* hide the hidden checkbox input */
+.navToggle {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Label used on mobile as the hamburger + All visible row */
+.navToggleLabel {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+}
+
+/* nav list horizontal layout by default */
+.navList {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+/* anchor styles in nav list */
+.navList li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.navList li a:hover {
+  color: var(--link-hover);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.navList li:first-child a p {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ====== Responsiveness ====== */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .logo img {
+    width: 95px;
+  }
+  .search-bar {
+    flex: 1 1 420px;
+  }
+}
+
+/* Mobile layout rules (small devices) */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* FIRST ROW: logo + deliver (keep together) */
+  .header-left {
+    order: 1;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .logo img {
+    width: 120px;
+    margin-top: 10px;
+    margin-right: 5vw;
+  }
+
+  /* SECOND ROW: search + language */
+  .search-bar {
+    order: 2;
+    width: calc(100% - 96px);
+    flex: 0 1 auto;
+    margin-right: 8px;
+  }
+  .lang {
+    order: 3;
+    width: 88px;
+    justify-content: flex-end;
+  }
+
+  /* THIRD ROW: sign in, returns, cart (stack horizontally but wrap if necessary) */
+  .header-right {
+    order: 4;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-top: 6px;
+    flex-wrap: wrap;
+  }
+  .signin,
+  .returnandorder {
+    min-width: 110px;
+  }
+
+  /* NAVBAR on mobile: show only the label (hamburger + All) initially */
+  .navToggleLabel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  /* Hide the full horizontal nav list by default on mobile */
+  .navList {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+    z-index: 1000;
+  }
+  .navList li {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 10px 0;
+  }
+  .navList li a {
+    padding: 6px 4px;
+    width: 100%;
+  }
+
+  /* When the checkbox is checked, show the nav list vertically */
+  .navToggle:checked + .navToggleLabel + .navList {
+    display: flex;
+  }
+
+  .navList .tobehidden {
+    display: none;
+  }
+  /* Presentation: make the first visible label look like the first nav item */
+  .navToggleLabel svg {
+    font-size: 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 420px) {
+  .logo img {
+    width: 95px;
+  }
+  .search-category {
+    min-width: 64px;
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+  .search-bar input[type="text"] {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .search-btn {
+    padding: 8px 10px;
+  }
+  .lang {
+    width: 72px;
+  }
+  .header-right {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f3;
+}
+
+.page img {
+  width: 15vw;
+}
+
+.page .card {
+  width: 350px;
+  margin-bottom: 1vh;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px 26px;
+  border-radius: 4px;
+}
+
+.page .brand {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.page .title {
+  font-size: 26px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.page label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.page input {
+  width: 100%;
+  height: 32px;
+  margin-top: 4px;
+  padding: 0 8px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+}
+
+.page input:focus {
+  outline: none;
+  border-color: #e77600;
+  box-shadow: 0 0 3px rgba(228, 121, 17, 0.5);
+}
+
+/* Password */
+.page .password-box {
+  position: relative;
+}
+
+.page .eye {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Buttons */
+.page .signin-btn {
+  width: 100%;
+  height: 34px;
+  margin-top: 16px;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.page.signin-btn:hover {
+  background: #ddb347;
+}
+
+.page .create-btn {
+  width: 100%;
+  height: 34px;
+  background: #e7e9ec;
+  border: 1px solid #adb1b8;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.page .create-btn:hover {
+  opacity: 0.7;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.page .terms {
+  font-size: 12px;
+  margin-top: 14px;
+  line-height: 1.4;
+}
+
+/* Divider */
+.page .divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 16px 0;
+  font-size: 12px;
+  color: #767676;
+}
+
+.page .divider::before,
+.page .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.page.divider span {
+  padding: 0 8px;
+}
+
+/* Error box */
+/* .error-box {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c40000;
+  background: #fff5f5;
+  border-radius: 4px;
+}
+
+.error-icon {
+  color: #c40000;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.error-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #c40000;
+  margin: 0;
+}
+
+.error-text {
+  font-size: 12px;
+  margin: 2px 0 0;
+  color: #111;
+} */
+
+/* Minimal error message */
+
+.page .error-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 5px;
+  padding: 10px 10px;
+  border: 1px solid #c40000;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.page.error-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c40000;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.page .error-message {
+  color: #111;
+  line-height: 1.3;
+}
